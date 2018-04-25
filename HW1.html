@@ -1,0 +1,50 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      
+      let sharm=15;
+      let hurgada =25;
+      let taba =6 ;
+
+      let user= +prompt("Введите число необходимых мест");
+
+      if(!Number.isInteger(user) || user<0){
+      alert("Ошибка ввода");
+      } else if (user<=taba){
+            if (confirm("Есть место в группе Taba. Вы согласны присоединиться к этой группе?")){
+               taba=taba-user;
+               alert("Приятного путешествия в группе Taba" );
+               } else {
+                alert("Нам очень жаль, приходите еще!")
+               }
+
+      }else if (user<=sharm){
+              if (confirm("Есть место в группе Sharm. Вы согласны присоединиться к этой группе?")){
+               sharm=sharm-user;
+               alert("Приятного путешествия в группе Sharm" );
+               }else{
+                alert("Нам очень жаль, приходите еще!")
+               }
+
+      }else if (user<=hurgada){
+               if (confirm("Есть место в группе Hurgada. Вы согласны присоединиться к этой группе?")){
+               hurgada=hurgada-user;
+               alert("Приятного путешествия в группе Hurgada" );
+               }else{
+                alert("Нам очень жаль, приходите еще!")
+               }
+      } else {
+        alert("Извините, мест нет")
+      }
+    
+  
+      console.log(taba,sharm, hurgada);
+
+    </script>
+  </body>
+  </html>
