@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -11,17 +11,21 @@ const numbers = [];
 let total = 0;
 
  do {
- 	let userInput = +prompt("enter a number");
+ 	userInput = prompt("enter a number");
+ 	if (isNaN(userInput)) {
+      alert("Было введено не число, попробуйте еще раз")
+ 	}else{
  	numbers.push(userInput);
- } while(userInput !=null);
+ 	console.log(userInput !==null)}
+ } while (userInput !==null);
 
 
 console.log(numbers);
 
 for (let element of numbers){
-	total=total+element;
+	total=total + (+element);
 }
- alert("Сумма чисел равна"+ total );
+ alert("Сумма чисел равна "+ total );
 
 
 	</script>
