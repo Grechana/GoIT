@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+<script>
+
+  const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
+
+  function addLogin(logins, login){
+    let login = prompt("You login");
+    console.log(login);
+
+    function checkLoginValidity(login) {
+      if (login.length > 4  &&  login.length < 16){
+        return true;
+      } else{
+        return false;
+      }
+    }
+    checkLoginValidity();
+
+
+    function checkIfLoginExists(logins, login){
+        if(logins===login){
+          return true;
+        } else {
+          return false;
+        }
+      }
+    checkIfLoginExists();
+
+    if (checkLoginValidity=== false){
+      alert("Ошибка! Логин должен быть от 4 до 16 символов");
+    } else{
+     if (checkIfLoginExists ===false){
+      alert("Логин успешно добавлен!");
+      logins.push(login);
+    } else {
+      alert ("Такой логин уже используется");
+    }
+  }
+}
+
+addLogin();
+
+
+
+
+</script>
+
+</body>
+</html>
