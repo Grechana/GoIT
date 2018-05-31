@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+	const products = {
+  bread: 10,
+  milk: 15,
+  apples: 20,
+  chicken: 50,
+  pork: 80,
+  cheese: 60,
+  tea: 20,
+  candy: 25
+};
+
+const order = {
+  bread: 2,
+  milk: 2,
+  apples: 1,
+  cheese: 1
+};
+
+
+
+function Cashier(name, products){
+	this.name=name;
+	this.products= [products];
+	this.totalPrice =0;
+	
+	this.changeAmount=0;
+
+	this.countTotalPrice= function(){
+        for(let product of this.products){
+            totalPrice = product*order
+        }
+        console.log(`Price: ${totalPrice}`);
+
+        ;
+
+   this.countChange = this.getCustomerMoney - this.totalPrice;
+
+   this.getCustomerMoney= function(){
+   	this.customerMoney = +prompt(` сумма покупок ${this.totalPrice}`);
+   	if (this.customerMoney<totalPrice){
+   		alert("Суммы не достаточно. Внесите больше денег")
+   	} else{
+   		alert(`Спасибо за покупку, ваша сдача ${his.countChange}`)
+   	}
+   }
+
+   this.reset = function(){
+   	this.totalPrice=0;
+   	this.changeAmount=0;
+   	this.customerMoney=0;
+
+   }
+
+   this.serve(order)=function(){
+   	this.countTotalPrice();
+   	this.getCustomerMoney();
+   	this.countChange();
+   	this.reset()
+
+   }
+
+}
+
+
+const cashier = new Cashier('Mango', products);
+cashier.serve(order);
+
+
+
+	</script>
+</body>
+</html>
