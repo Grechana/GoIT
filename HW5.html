@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+<script>
+
+	const initialUsers = [
+	{ 
+		id: "-s19a6hqce",
+		login: "mangozedog@mail.com", 
+		password: "qwe123zv", 
+		isActive: true
+		 },
+	{ 
+		id: "-qkpzenjxe", 
+		login: "polysweet@skynet.ze", 
+		password: "123zxc78", 
+		isActive: true
+		 },
+	{ 
+		id: "-e51cpd4di", 
+		login: "ajax2k@change.ua", 
+		password: "ert234qw", 
+		isActive: false }
+	];
+
+	
+	function SocialBook (users = [], posts = {}) { 
+		this.users = users;
+		this.posts = posts;
+		this. login = login;
+	}
+
+	const getAllUsers = initialUsers.filter(function (element) {
+		return element;
+	})
+	console.log(getAllUsers);
+	
+
+	const getUserByLogin  = initialUsers.find(element => element['login'] === "polysweet@skynet.ze");
+	 console.log(getUserByLogin);
+    
+
+	 const isUserActive  = initialUsers.map(function (element){
+	 		if(element['id']==="-s19a6hqce"){
+	 			return element['isActive'];
+	 		}
+	 })
+	 console.log(isUserActive);
+    
+  const getActiveUsers  = initialUsers.filter(function (element){
+	 		if(element['isActive']===true){
+	 			return element;
+	 		}
+	 })
+	 console.log(getActiveUsers);
+
+ 
+    
+    // - updateUserById(userId, obj) - обновляет объект пользователя с id равным userId  - я не понимаю что нужно сделать.
+
+ 
+  	const getId = () => "-" + Math.random().toString(36).substr(2, 9);
+
+	const user = { 
+		id: getId(), 
+		login: prompt("введите Ваш логин") ,
+		password: prompt("введите Ваш пароль"), 
+		isActive: false
+		 }
+	console.log(user)
+
+	const addUser= initialUsers.push(user)
+	console.log(initialUsers)
+
+	const removeUserById=initialUsers.map(function (element){
+		if(element['id']==="-s19a6hqce"){
+			return initialUsers.pop(element);
+		}
+	})
+
+	console.log(initialUsers)
+
+    
+   const getUsersCount=console.log(initialUsers.length);
+
+</script>
+
+</body>
+</html>
