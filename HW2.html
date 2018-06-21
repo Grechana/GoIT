@@ -14,6 +14,8 @@ let total = 0;
  	userInput = prompt("enter a number");
  	if (isNaN(userInput)) {
       alert("Было введено не число, попробуйте еще раз")
+ 	}else if (userInput===null){
+ 		break
  	}else{
  	numbers.push(userInput);
  	console.log(userInput !==null)}
